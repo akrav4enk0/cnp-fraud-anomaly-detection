@@ -1,0 +1,16 @@
+# Raw competition data — not redistributable; see README for how to obtain it
+Data/
+
+# Large regenerable intermediate outputs (recreated by Part 3 / Part 4)
+processed/
+artifacts/*.joblib
+models/*.joblib
+models/*.pkl
+
+# Jupyter / OS / Python housekeeping
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/

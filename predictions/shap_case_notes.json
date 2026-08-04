@@ -1,0 +1,83 @@
+[
+  {
+    "TransactionID": 3480693,
+    "calibrated_score": 1.0,
+    "true_label": "fraud",
+    "top_drivers": [
+      {
+        "feature": "C14",
+        "shap_value": 1.9087723581693388
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.962318862841731
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.9564753301760717
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.9497846120574983
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.6894645119301791
+      }
+    ]
+  },
+  {
+    "TransactionID": 3492819,
+    "calibrated_score": 1.0,
+    "true_label": "fraud",
+    "top_drivers": [
+      {
+        "feature": "C1",
+        "shap_value": 1.5472890027051898
+      },
+      {
+        "feature": "C14",
+        "shap_value": 1.1332970789700751
+      },
+      {
+        "feature": "C13",
+        "shap_value": 1.0682562700059186
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.5669903419165813
+      },
+      {
+        "feature": "C4",
+        "shap_value": 0.538358919320736
+      }
+    ]
+  },
+  {
+    "TransactionID": 3577092,
+    "calibrated_score": 0.9440993788819876,
+    "true_label": "fraud",
+    "top_drivers": [
+      {
+        "feature": "C1",
+        "shap_value": 1.657963819686813
+      },
+      {
+        "feature": "Vgrp009_pca1",
+        "shap_value": 0.5447042875774845
+      },
+      {
+        "feature": "Vgrp003_pca1",
+        "shap_value": 0.5401818437363767
+      },
+      {
+        "feature": "DeviceInfo_fe",
+        "shap_value": 0.44305860054270946
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.4095047804684263
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+scenario,model,k_budget,mean_precision_at_k,mean_recall_at_k,analyst_hours_per_day
+"Lean team (~2 analyst-hrs/day, ~15 alerts/day)",Isolation Forest,15,0.081,0.013,2.0
+"Lean team (~2 analyst-hrs/day, ~15 alerts/day)",Autoencoder,15,0.106,0.018,2.0
+"Lean team (~2 analyst-hrs/day, ~15 alerts/day)",Calibrated LightGBM (supervised reference),15,0.875,0.142,2.0
+"Expanded team (~4 analyst-hrs/day, ~30 alerts/day)",Isolation Forest,30,0.071,0.023,4.0
+"Expanded team (~4 analyst-hrs/day, ~30 alerts/day)",Autoencoder,30,0.106,0.036,4.0
+"Expanded team (~4 analyst-hrs/day, ~30 alerts/day)",Calibrated LightGBM (supervised reference),30,0.796,0.256,4.0
