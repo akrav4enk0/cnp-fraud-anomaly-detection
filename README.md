@@ -28,20 +28,24 @@ notebook.
 | # | Notebook | Reads | Produces |
 |---|---|---|---|
 | 1 | `Part 1 - EDA.ipynb` | `Data/train_*.csv` | `artifacts/` (schema snapshot, missingness summary, target balance, chronological split boundaries) |
-| 2 | `Part 2- feature_audit.ipynb` | `Data/train_*.csv`, `artifacts/split_config.json` | `artifacts/` (rare-category keep-lists, V-block groupings, audited/selected feature lists, PSI drift tables) |
-| 3 | `Part 3 - preprocessing.ipynb` | `Data/train_*.csv`, `artifacts/*` from Parts 1-2 | `processed/train_processed_gbm.parquet`, `processed/train_processed_ifae.parquet`, `processed/preprocessing_meta.json` |
-| 4 | `Part 4- Modelling.ipynb` | `processed/*` from Part 3 | `predictions/` (model comparison, Precision@K/Recall@K tables and curves, SHAP outputs, alert-budget recommendation, figures) |
+| 2 | `Part 2 - Feature Audit.ipynb` | `Data/train_*.csv`, `artifacts/split_config.json` | `artifacts/` (rare-category keep-lists, V-block groupings, audited/selected feature lists, PSI drift tables) |
+| 3 | `Part 3 - Preprocessing.ipynb` | `Data/train_*.csv`, `artifacts/*` from Parts 1-2 | `processed/train_processed_gbm.parquet`, `processed/train_processed_ifae.parquet`, `processed/preprocessing_meta.json` |
+| 4 | `Part 4 - Modelling.ipynb` | `processed/*` from Part 3 | `predictions/` (model comparison, Precision@K/Recall@K tables and curves, SHAP outputs, alert-budget recommendation, figures) |
 
 Run with **Kernel → Restart & Run All**, in order 1 → 2 → 3 → 4. Each notebook reads only the
 `artifacts/`/`processed/` files written by the ones before it plus the raw data -- no manual
 copying between folders is required.
 
-**Jupyter must be launched from this project folder** (the one containing this README and
-`Data/`), since every notebook locates its files relative to `Path.cwd()`. If Jupyter was
-started from somewhere else, `cd` into this folder in a terminal before running
-`jupyter notebook` / `jupyter lab`, or run `os.chdir("<path to this folder>")` as the first
-cell. Each notebook raises a clear error naming the missing folder if the working directory
-is wrong, rather than failing on the raw pandas error.
+**Before running, set `PROJECT_DIR` at the top of each notebook** (the first code cell after the
+imports) to the full local path of this project folder -- the one containing this README and
+`Data/`. For example:
+
+```python
+PROJECT_DIR = Path("/Users/yourname/path/to/project")
+```
+
+Each notebook only needs this one line changed; everything else (`Data/`, `artifacts/`,
+`processed/`, `predictions/`) is located relative to it automatically.
 
 ## Method summary
 
