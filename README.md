@@ -48,11 +48,11 @@ notebook.
 | 3 | `Part 3_Preprocessing.ipynb` | `Data/train_*.csv`, `artifacts/*` from Parts 1-2 | `processed/train_processed_gbm.parquet`, `processed/train_processed_ifae.parquet`, `processed/preprocessing_meta.json` |
 | 4 | `Part 4_Modeling.ipynb` | `processed/*` from Part 3 | `predictions/` (model comparison, Precision@K/Recall@K tables and curves, SHAP outputs, alert-budget recommendation, figures) |
 
-Run with **Kernel → Restart & Run All**, in order 1 → 2 → 3 → 4. Each notebook reads only the
+1. Run with Kernel → Restart & Run All, in order 1 → 2 → 3 → 4. Each notebook reads only the
 `artifacts/`/`processed/` files written by the ones before it plus the raw data -- no manual
 copying between folders is required.
 
-**Before running, set `PROJECT_DIR` at the top of each notebook** (the first code cell after the
+2. Before running, set `PROJECT_DIR` at the top of each notebook (the first code cell after the
 imports) to the full local path of this project folder -- the one containing this README and
 `Data/`. For example:
 
