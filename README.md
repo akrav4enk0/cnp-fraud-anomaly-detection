@@ -3,7 +3,7 @@
 Supervised Research (Law, Economics, and Data Science), 851-0763-00L 
 Anna Kravchenko | akravchenko@student.ethz.ch
 
-Anomaly detection for card-not-present (CNP) fraud on the IEEE-CIS Vesta dataset, framed as
+Anomaly detection for card-not-present (CNP) fraud on the IEEE-CIS / Vesta dataset, framed as
 top-K alert ranking under a fixed daily review budget rather than a leaderboard classification
 task. The final project report is in `docs/`, as well as description of the topic selection and Outline.
 
