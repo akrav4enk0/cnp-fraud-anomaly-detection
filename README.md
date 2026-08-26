@@ -8,10 +8,8 @@ top-K alert ranking under a fixed daily review budget. The final project report 
 
 ## Data
 
-*The raw competition files are not included in this repository or submission.* Kaggle's
-Competition Rules restrict redistributing Competition Data to anyone not participating in the
-competition, so the four IEEE-CIS files must come directly from Kaggle rather than being
-shipped here.
+*The raw files are not included in this repository.* Kaggle's
+Competition Rules restrict redistributing Competition Data, so the IEEE-CIS data files must come directly from Kaggle.
 
 Note: every notebook in this project is saved with its cells already executed, so you can
 read all results, tables, and figures directly without downloading anything or running
