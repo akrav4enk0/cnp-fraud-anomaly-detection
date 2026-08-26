@@ -77,6 +77,7 @@ Each notebook only needs this one line changed; everything else (`Data/`, `artif
   label-encoded one for gradient-boosted trees, and a one-hot + frequency-encoded + standardized
   one for distance/reconstruction-based models.
 - **Modeling (Part 4).**
+  
   Isolation Forest and a small tabular Autoencoder are the primary,
   unsupervised detectors (`isFraud` never used for fitting). A single isotonic-calibrated
   LightGBM model is included as a labeled supervised reference. Evaluation is operational:
