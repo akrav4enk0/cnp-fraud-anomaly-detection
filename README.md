@@ -66,11 +66,18 @@ Each notebook only needs this one line changed; everything else (`Data/`, `artif
 ## Method summary
 
 - **Split.**
+  
   Strictly chronological `train` (60%) / `val` (20%) / `holdout` (20%) windows by
   `TransactionDT`, shared identically across all four notebooks via `artifacts/split_config.json`.
   `holdout` is the outline's "test" window, renamed to make explicit that its labels are never
   used for any fitting or selection decision.
+
+- **EDA & Feature Audit (Parts 1-2).**
+
+Weekly fraud rate is non-stationary (2.1-5.1%, with a spike in late March), and several id_*/D*/dist* fields are structurally missing (85-99% of rows) rather than missing at random — both motivate the chronological split and explicit missingness indicators rather than silent imputation. The 339 raw V-columns are reduced to 11 groups by missingness-pattern clustering, each kept as its first principal component. Two robustness checks validate this design: a leakage smoke test (single-feature AUCs well below levels that would flag a hidden join) and a population stability index (PSI) audit, which flags D-block time-delta features as the main drift risk."
+  
 - **Preprocessing (Part 3).**
+  
   Every fitted statistic (rare-category vocab, frequency encodings,
   UID aggregates, V-block PCA, one-hot categories, imputation median, scaler mean/std) is fit on
   `train`-split rows only, then applied to `val`/`holdout`. Two feature branches are produced: a
